@@ -1,0 +1,15 @@
+<!-- res/drawable/rounded_gradient_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/colorPrimary"
+        android:centerColor="#FF0FFFF0"
+        android:endColor="@color/colorPrimary"
+        android:angle="0" />
+    <stroke android:color="#CCCCCC" android:width="2dp"/>
+    <corners android:radius="16dp"/>
+    <padding
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp"
+        android:bottom="10dp"/>
+</shape>
