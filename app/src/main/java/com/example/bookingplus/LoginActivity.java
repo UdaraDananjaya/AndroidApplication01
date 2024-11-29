@@ -1,6 +1,10 @@
 package com.example.bookingplus;
 
 import android.os.Bundle;
+import android.content.Intent;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
+    private AuthManager authManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +24,22 @@ public class LoginActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        authManager = new AuthManager(this);
+        EditText emailField = findViewById(R.id.etUsername);
+        EditText passwordField = findViewById(R.id.etPassword);
+        Button registerButton = findViewById(R.id.btnLogin);
+
+        registerButton.setOnClickListener( view -> {
+            String email = emailField.getText().toString();
+            String password = passwordField.getText().toString();
+            authManager.loginUser(email, password);
+        });
+        TextView welcomeButton = findViewById(R.id.tvSignUp);
+        welcomeButton.setOnClickListener(view -> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         });
     }
 }
