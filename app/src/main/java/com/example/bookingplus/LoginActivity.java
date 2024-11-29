@@ -29,16 +29,17 @@ public class LoginActivity extends AppCompatActivity {
         authManager = new AuthManager(this);
         EditText emailField = findViewById(R.id.etUsername);
         EditText passwordField = findViewById(R.id.etPassword);
-        Button registerButton = findViewById(R.id.btnLogin);
+        Button loginButton = findViewById(R.id.btnLogin);
 
-        registerButton.setOnClickListener( view -> {
+        loginButton.setOnClickListener( view -> {
             String email = emailField.getText().toString();
             String password = passwordField.getText().toString();
             authManager.loginUser(email, password);
         });
-        TextView welcomeButton = findViewById(R.id.tvSignUp);
-        welcomeButton.setOnClickListener(view -> {
-            Intent intent = new Intent(this, MainActivity.class);
+
+        TextView WelcomeLinkTextView = findViewById(R.id.tvSignUp);
+        WelcomeLinkTextView.setOnClickListener(view -> {
+            Intent intent = new Intent(this, RegisterActivity.class);
             startActivity(intent);
         });
     }
