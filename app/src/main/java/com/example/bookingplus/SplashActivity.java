@@ -53,14 +53,14 @@ public class SplashActivity extends AppCompatActivity {
                     progressHandler.postDelayed(this, 10);
                 } else {
                     progressBar.setVisibility(ProgressBar.GONE);
-                    startMainActivity();
+                    startNextActivity();
                 }
             }
         };
         progressHandler.post(updateProgressRunnable);
     }
-    private void startMainActivity() {
-        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+    private void startNextActivity() {
+        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
