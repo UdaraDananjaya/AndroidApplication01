@@ -7,4 +7,6 @@
     <string name="welcome_text">Welcome to Booking +</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="sign_up">Sign Up</string>
+    <string name="create_account">Create a new account : Booking +</string>
+    <string name="already_account">Already Have an Account</string>
 </resources>
