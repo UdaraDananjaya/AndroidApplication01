@@ -9,4 +9,8 @@
     <string name="sign_up">Sign Up</string>
     <string name="create_account">Create a new account : Booking +</string>
     <string name="already_account">Already Have an Account</string>
+    <string name="save_vehicle">Save Vehicle</string>
+    <string name="rent_per_day">Rent per Day</string>
+    <string name="vehicle_type">Vehicle Type</string>
+    <string name="vehicle_name">Vehicle Name</string>
 </resources>
